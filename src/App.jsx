@@ -16,10 +16,10 @@ function App() {
             try {
                 const response = await fetch(`https://api.mockaroo.com/api/generate.json?schema=userData&key=${process.env.REACT_APP_API_KEY}`)
                 const dataFromAPI = await response.json()
-                
-                setDataFromAPI(dataFromAPI)
+    
+                if (response.status === 200) setDataFromAPI(dataFromAPI)
             } catch (error) {
-                console.error(error)
+                console.error("The API has a daily limit of 200 requests. If you are not able to see the user data, please try again after some time as the current daily limit has been crossed")
             }
         }
         

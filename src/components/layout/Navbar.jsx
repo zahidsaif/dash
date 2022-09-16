@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 import navLinks from "./extras/navLinks";
 
 const Navbar = () => {
-    return <nav className={"bg-dash-blue rounded-3xl p-12 text-white shadow"} style={{ minWidth: '20rem' }}>
+    return <nav className={"bg-dash-blue rounded-3xl p-12 text-white shadow min-h-[95vh]"} style={{ minWidth: '20rem' }}>
         <h2 className={"font-bold text-5xl"}>Dash.</h2>
         
         <section className={"mt-5 flex flex-col justify-between h-[92%]"}>
